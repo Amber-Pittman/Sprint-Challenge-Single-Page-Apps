@@ -17,7 +17,7 @@ export default function CharacterList() {
           setCharacter(response.data.results)
         })
         .catch(err => {
-          console.error("You're experiencing a Server Error", err)
+          console.error("Character List Server Error", err)
         })
     }
     getChar();
