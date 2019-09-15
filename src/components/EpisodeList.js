@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import EpisodeCard from "./EpisodeCard";
 
-export default function EpisodeList() {
+export default function EpisodeList(props) {
   // TODO: Add useState to track data from useEffect
-  const [ episodes, setEpisode ] = useState([]);
+  const [ episodes, setEpisodes ] = useState([]);
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -14,7 +14,8 @@ export default function EpisodeList() {
       axios
         .get("https://rickandmortyapi.com/api/episode/")
         .then(response => {
-            setEpisode(response.data.results) // episode is inside results
+            console.log(response.data.response, "Char Info in Episode List")
+            setEpisodes(response.data.results); // episode is inside results
         })
         .catch(err => {
           console.error("Episode List Server Error", err)
