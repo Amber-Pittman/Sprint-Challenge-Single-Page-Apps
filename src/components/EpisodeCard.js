@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Icon} from "semantic-ui-react";
 
-export default function EpisodeCard(episodes) {
+export default function EpisodeCard(episodes) { //without {} I see info in console
   console.log("episode card props", episodes); // doesn't acknowledge episodes here
   const {name, episode, air_date, characters} = episodes;
 
