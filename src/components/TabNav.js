@@ -1,10 +1,6 @@
 import React, {useState} from "react";
 import { Menu, Icon } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
-import WelcomePage from "./WelcomePage";
-import CharacterList from "./CharacterList";
-import LocationsList from "./LocationsList";
-import EpisodeList from "./EpisodeList";
 
 // TODO: Add missing menu/tabs/nav below
 
