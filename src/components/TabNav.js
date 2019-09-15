@@ -19,7 +19,7 @@ export default function TabNav() {
     const [tab, setTab] = useState("home");
 
     return(
-        <Menu defaultActiveKey="home" activeKey={tab} onSelect={tab => setTab(tab)}>
+        <Menu>
             <Tab eventTab="home" title="Home Page">
               <Icon name="home" /> 
               <NavLink to="/" activeClassName="home"> Home Page </NavLink>

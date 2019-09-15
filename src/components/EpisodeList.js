@@ -14,7 +14,7 @@ export default function EpisodeList() {
       axios
         .get("https://rickandmortyapi.com/api/episode/")
         .then(response => {
-            setEpisode(response.data.results)
+            setEpisode(response.data.results) // episode is inside results
         })
         .catch(err => {
           console.error("Episode List Server Error", err)
@@ -27,8 +27,8 @@ export default function EpisodeList() {
     <section className="grid-view">
       {episodes.map(epi => (
         <EpisodeCard 
-          key={epi.id}
-          episode={epi}
+          key={episodes.id}
+          episode={episodes}
           />
       ))}
     </section>
