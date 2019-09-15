@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Tab, Menu, Icon } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
@@ -11,5 +11,28 @@ import { NavLink } from "react-router-dom";
 // https://react.semantic-ui.com/collections/breadcrumb/
 
 export default function TabNav() {
+
+    const [tab, setTab] = useState("home");
+
+    return(
+        <Menu defaultActiveKey="home" activeKey={tab} onSelect={tab => setTab(tab)}>
+            <Tab eventTab="home" title="Home Page">
+              <Icon name="home" /> 
+              <NavLink to="/" activeClassName="home"> Home Page </NavLink>
+            </Tab>
+            <Tab eventTab="character" title="Characters" >
+              <Icon name="users" />
+              <NavLink to="/character" activeClassName="characters">Characters</NavLink>
+            </Tab>
+            <Tab eventTab="location" title="Locations" >
+              <Icon name="map outline" />
+              <NavLink to="/location" activeClassName="locations">Locations</NavLink>
+            </Tab>
+            <Tab eventTab="episode" title="Episodes" >
+              <Icon name="video" />
+              <NavLink to="/episode" activeClassName="episodes">Episodes</NavLink>
+            </Tab>
+        </Menu>
+    )
 
 };
