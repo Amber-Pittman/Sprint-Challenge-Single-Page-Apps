@@ -3,7 +3,7 @@ import { Card, Image } from "semantic-ui-react";
 
 export default function CharacterCard({character}) {
   console.log("char card props", character);
-  const { image, name, location, origin, } = character;
+  const { image, name, location, origin } = character;
 
   return (
     <Card>
